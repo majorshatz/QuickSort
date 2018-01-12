@@ -7,7 +7,7 @@ public class QuickSort {
         if (left>=right){
             return;
         }
-        int pivot=((left+right)/2);
+        int pivot=(((left+right)/2));
         int index = partition(array, left,right, pivot);
         quicksort(array,left,index-1);
         quicksort(array,index,right);
@@ -41,11 +41,12 @@ public class QuickSort {
     public static void main (String [] args){
 
         System.out.println("Unsorted:");
-        int [] arrayTest={2,4,6,7,1,9};
+        int [] arrayTest={2,4,6,7,1,9,3};
         for(int i=0;i<arrayTest.length;i++)
             System.out.print(arrayTest[i]+",");
         System.out.println();
         System.out.println("Sorted:");
+        quicksort(arrayTest);
         quicksort(arrayTest);
         for(int i=0;i<arrayTest.length;i++)
             System.out.print(arrayTest[i]+",");
